@@ -1,5 +1,6 @@
 @import "mixins/fontface";
 
 
-@include font-face("fontsName", "../assets/fonts/fontsName", 400);
+@include font-face("Roboto", "../assets/fonts/RobotoCondensed-Regular", 400);
+@include font-face("Roboto", "../assets/fonts/RobotoCondensed-Bold", 700);
 

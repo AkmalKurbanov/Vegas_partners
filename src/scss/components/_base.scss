@@ -7,7 +7,8 @@ html,
 body {
   height: 100%;
   position: relative;
-  // font-family: $helvetica;
+  font-family: $roboto;
+  background-color: $bc;
 }
 
 a {
@@ -82,3 +83,35 @@ button {
 
 // container end
 
+// btn
+
+.btn {
+  max-width: 160px;
+  width: 100%;
+  min-height: 41px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background-color: $mc;
+  text-transform: uppercase;
+  color: $wc;
+  box-shadow: inset 10px 10px 10px 1px rgba(0, 0, 0, 0.44);
+  font-weight: 700;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba($mc, .88);
+  }
+
+  &--another-kind {
+    background-color: $sc;
+    color: $bc;
+
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba($sc, .88);
+    }
+  }
+}
+
+
+// btn end

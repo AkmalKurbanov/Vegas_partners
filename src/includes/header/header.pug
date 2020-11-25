@@ -1,1 +1,19 @@
-header 1
+header.header
+  .container
+    .header__wrap
+      .header__logo
+        a(href="#")
+          img(src="/assets/img/logo.svg", alt="")
+      .header__nav.nav
+        nav.nav
+          ul
+            mixin nav_item(item,active)
+              li(class=active)
+                a(href="#")=item
+            +nav_item('main','active')
+            +nav_item('Our brand')
+            +nav_item('questions and answers')
+            +nav_item('Contacts')
+      .header__button-panel
+        a(href="#").btn registration
+        a(href="#").btn.btn--another-kind Enter
