@@ -1,0 +1,200 @@
+.tabs {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    margin-bottom: rem(150px);
+
+    li {
+      display: inline-block;
+      position: relative;
+      flex-basis: 14.9%;
+    }
+
+    a {
+      color: $wc;
+      font-weight: 700;
+      outline: none;
+      padding: 0 20px;
+      text-decoration: none;
+      transition: $tr;
+      padding: rem(30px) 0;
+      display: block;
+      text-align: center;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: rem(3px);
+        left: 0;
+        bottom: 0;
+        background-color: #002018;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: rem(4px);
+        left: 50%;
+        transform: translate(-50%);
+        bottom: rem(0px);
+        background: $sc;
+        transition: $tr;
+      }
+    }
+  }
+
+  &__item {
+    display: none;
+    color: $wc;
+    position: relative;
+    z-index: 999;
+
+    &:first-child {
+      display: block;
+    }
+
+    * {
+      color: $wc;
+    }
+
+    p {
+      font-size: rem(24px);
+      margin-bottom: rem(20px);
+      line-height: 30px;
+    }
+  }
+
+  .current a {
+    color: $sc;
+    position: relative;
+
+    &:after {
+      width: 100%;
+      border-radius: rem(2px);
+      filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.7));
+      background-image: linear-gradient(0deg, #ffac00 0%, #ffae00 6%, #ffb800 12%, #ffb900 20%, #ffd700 27%, #ffe200 35%, #ffe200 39%, #ffe200 44%, #ffe28c 51%, #ffe200 61%, #ffe200 66%, #ffc800 70%, #ffb800 76%, #ffb800 80%, #ffbb00 86%, #ffd100 90%, #ffca00 100%);
+    }
+  }
+
+  &__mob-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__mob {
+    max-width: rem(290px);
+    min-height: rem(620px);
+    border-radius: rem(45px);
+    border: rem(10px) solid $wc;
+    width: 100%;
+    padding: rem(130px) rem(20px) rem(20px);
+    // overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+
+    &__mob-img {
+      position: relative;
+    }
+
+    .current {
+       
+        display: block;
+      
+    }
+  }
+
+  &__title {
+    z-index: 1;
+    position: relative;
+    font-weight: 700;
+    font-size: rem(46px);
+    letter-spacing: rem(5px);
+    margin-bottom: rem(20px);
+  }
+
+  &__mob-nav {
+    max-width: rem(50px);
+    min-height: rem(217px);
+    border: rem(1px) solid #00ca91;
+    border-radius: rem(25px) 0 0 rem(25px);
+    width: 100%;
+    background-color: rgba(#002c26, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      flex-direction: column;
+
+      li {
+        margin: rem(10px);
+        width: rem(8px);
+        height: rem(8px);
+        border-radius: 4px;
+        background-color: #031411;
+        padding: 0;
+        border-radius: 100%;
+        pointer-events: none;
+
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .current {
+      overflow: hidden;
+      filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.7));
+      background-image: linear-gradient(0deg, #535258 0%, #5d5453 6%, #73685f 12%, #786c56 20%, #b09878 27%, #f0deb3 35%, #fcebbe 39%, #eae1d1 44%, #ffffff 51%, #fefbf0 61%, #d2c1ab 66%, #988978 70%, #74685b 76%, #74685b 80%, #7d7161 86%, #9e9278 90%, #988c7b 100%);
+      border: 1px solid #fefbf0;
+    }
+  }
+
+  &__item-content {
+    position: absolute;
+    top: 0;
+    margin-left: 140%;
+  }
+
+  &__mob-arrow {
+    position: absolute;
+    width: rem(15px);
+    height: rem(2px);
+    background-color: #8e7576;
+    top: rem(40px);
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top: 5px solid transparent;
+      border-right: 5px solid #8e7576;
+      border-bottom: 5px solid transparent;
+    }
+  }
+
+  &__mob-hamburger {
+    position: absolute;
+    right: rem(20px);
+    top: rem(30px);
+
+    i {
+      width: rem(15px);
+      height: rem(2px);
+      margin-bottom: rem(4px);
+      background-color: #1a364b;
+      display: block;
+    }
+  }
+}
