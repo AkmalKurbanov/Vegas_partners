@@ -1,0 +1,54 @@
+.advantages {
+  padding: rem(200px) 0;
+  background-position: right bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__slider {
+    padding: rem(50px) 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: rem(250px);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__count {
+    position: relative;
+    padding-right: rem(25px);
+    margin-right: rem(25px);
+
+    &:after {
+      position: absolute;
+      content: '';
+      right: 0;
+      width: rem(9px);
+      height: 100%;
+      border-radius: 4px;
+      background-image: linear-gradient(180deg, #d38e00 0%, #ffdc32 0%, #ffdc3c 0%, #ffdc4f 0%, #ffdc2a 0%, #ffc400 0%, #f3a300 0%, #f3a300 0%, #fcac00 0%, #ffcd00 0%, #f2a300 0%, #dd9000 0%, #f7a700 20%, #ffd200 27%, #ffdc7c 51%, #ffdc6e 61%, #ffc600 100%);
+      border: rem(1px) solid;
+    }
+
+    span {
+      font-size: rem(100px);
+      color: $wc;
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    p {
+      color: $wc;
+      font-size: rem(27px);
+      line-height: rem(36px);
+      font-weight: 700;
+    }
+  }
+
+  .swiper-container {
+    overflow: hidden;
+    height: rem(300px);
+  }
+}

@@ -1,4 +1,11 @@
 .tabs {
+  padding-bottom: rem(120px);
+  background-size: cover;
+
+  &__content {
+    padding-left: rem(100px);
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -103,9 +110,7 @@
     }
 
     .current {
-       
-        display: block;
-      
+      display: block;
     }
   }
 
@@ -141,6 +146,7 @@
         padding: 0;
         border-radius: 100%;
         pointer-events: none;
+        box-shadow: 0 0 10px rgba(#00ca91, 0.5);
 
         &:before,
         &:after {
@@ -161,6 +167,10 @@
     position: absolute;
     top: 0;
     margin-left: 140%;
+
+    .btn {
+      color: $wc !important;
+    }
   }
 
   &__mob-arrow {

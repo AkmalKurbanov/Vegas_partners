@@ -1,0 +1,100 @@
+.get-start {
+  background-size: cover;
+  background-position: center center;
+  padding: rem(100px) 0;
+  position: relative;
+  z-index: 0;
+
+  .title-wrap {
+    padding-left: rem(70px);
+    color: $wc;
+  }
+
+  .steps {
+    display: flex;
+    align-items: center;
+    margin-top: rem(32px);
+
+    &__wrap {
+      border-radius: rem(45px);
+      border: rem(10px) solid $wc;
+      max-width: rem(810px);
+      height: rem(420px);
+      background-size: cover;
+      background-position: right;
+      box-sizing: border-box;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 120%;
+        left: 10%;
+        top: 11%;
+        height: 397px;
+        border-radius: 50px;
+        background-color: #002c26;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      .title-wrap {
+        padding: 0;
+      }
+    }
+
+    &__content {
+      padding: rem(50px) rem(60px);
+      overflow: hidden;
+
+      p {
+        font-size: 28px;
+        margin: rem(30px) 0 rem(40px);
+        color: $wc;
+      }
+    }
+
+    &__step {
+      color: $sc;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: rem(18px);
+      margin-bottom: rem(20px);
+    }
+
+    .pagination {
+      margin-left: rem(75px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: rem(180px);
+      width: rem(95px);
+      position: relative;
+
+      .step-btn {
+        cursor: pointer;
+        outline: none;
+        transition: $tr;
+        position: absolute;
+        width: rem(90px);
+        height: rem(90px);
+
+        &:last-child {
+          bottom: 0;
+        }
+
+        &:hover {
+          opacity: 0.8;
+          transform: translate(-3px, -3px);
+        }
+      }
+    }
+  }
+
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+}

@@ -1,3 +1,80 @@
 .footer {
   flex: 0 0 auto;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(100px) 0;
+  }
+
+  .mail {
+    &__form-wrap {
+      border: rem(3px) solid #01a259;
+      display: inline-flex;
+      text-transform: uppercase;
+      border-radius: rem(45px);
+      color: $wc;
+      font-weight: 700;
+      padding: rem(23px) rem(70px) rem(23px) rem(15px);
+      position: relative;
+      max-width: rem(400px);
+      width: 100%;
+
+      ::-webkit-input-placeholder {
+        color: $wc;
+        padding-left: rem(45px);
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      ::-moz-placeholder {
+        color: $wc;
+        padding-left: rem(45px);
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      :-moz-placeholder {
+        color: $wc;
+        padding-left: rem(45px);
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      :-ms-input-placeholder {
+        color: $wc;
+        padding-left: rem(45px);
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      &:hover {
+        background-color: #01a259;
+
+        span {
+          transform: translate(-12%, -50%);
+        }
+      }
+
+      span {
+        max-width: rem(65px);
+        width: 100%;
+        min-height: rem(65px);
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        transition: $tr;
+      }
+
+      input {
+        z-index: 1;
+        position: relative;
+        color: $wc;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }

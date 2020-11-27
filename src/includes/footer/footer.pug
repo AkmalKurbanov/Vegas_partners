@@ -1,1 +1,20 @@
-div 2
+footer.footer
+  .container
+    .footer__top
+      .logo
+        a(href="#")
+          img(src="assets/img/logo.svg", alt="")
+      .social
+        ul
+          each val, index in ['assets/img/twit.svg', 'assets/img/mail.svg', 'assets/img/insta.svg']
+            li
+              a(href="#")
+                img(src=val, alt="")
+      .mail
+        form(action="")
+          .mail__form-wrap
+            input(type="text" placeholder="enter your email")
+            span
+              img(src="assets/img/mail.svg", alt="")
+
+                       
