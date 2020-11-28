@@ -1,7 +1,17 @@
 .tabs {
   padding-bottom: rem(120px);
   background-size: cover;
-
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 200%;
+    background-image: url('../../assets/img/tabs_bg1.png');
+    top: -80%;
+    background-size: cover;
+    background-position: top;
+  }
   &__content {
     padding-left: rem(100px);
   }

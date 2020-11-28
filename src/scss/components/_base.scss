@@ -210,3 +210,76 @@ button {
 }
 
 // social end
+//  input
+.input-wrap {
+  border: rem(3px) solid #01a259;
+  display: inline-flex;
+  text-transform: uppercase;
+  border-radius: rem(45px);
+  color: $wc;
+  font-weight: 700;
+  padding: 0 rem(75px) 0 rem(40px);
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+
+  ::-webkit-input-placeholder {
+    color: $wc;
+    // padding-left: rem(30px);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  ::-moz-placeholder {
+    color: $wc;
+    // padding-left: rem(30px);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  :-moz-placeholder {
+    color: $wc;
+    // padding-left: rem(30px);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  :-ms-input-placeholder {
+    color: $wc;
+    // padding-left: rem(30px);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &:hover {
+
+    span,
+    button {
+      transform: translate(-12%, -50%);
+    }
+  }
+
+  span,
+  button {
+    max-width: rem(65px);
+    width: 100%;
+    min-height: rem(65px);
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    transition: $tr;
+  }
+
+  input {
+    z-index: 1;
+    position: relative;
+    color: $wc;
+    width: 100%;
+    max-width: 100%;
+    height: rem(62px);
+  }
+}
+
+//  input end

@@ -12,9 +12,24 @@ footer.footer
                 img(src=val, alt="")
       .mail
         form(action="")
-          .mail__form-wrap
+          .mail__input-wrap.input-wrap
             input(type="text" placeholder="enter your email")
-            span
+            button(type="submit")
               img(src="assets/img/mail.svg", alt="")
-
-                       
+  .footer__bottom(style="background-image: url('../../assets/img/footer_bg.jpg')")
+    .footer__partners
+      .footer__partners-slider
+        .swiper-container.partners-js
+          .swiper-wrapper
+            .swiper-slide 
+              img(src="../../assets/img/partner1.svg", alt="") 
+            .swiper-slide 
+              img(src="../../assets/img/partner2.svg", alt="") 
+            .swiper-slide 
+              img(src="../../assets/img/partner3.svg", alt="") 
+            .swiper-slide 
+              img(src="../../assets/img/partner4.svg", alt="") 
+      .footer__partners-text
+        p
+          span Vegas partners 
+          | affiliate program               

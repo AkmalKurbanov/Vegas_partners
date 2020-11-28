@@ -1,0 +1,62 @@
+.popup {
+  text-align: center;
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba($bc, 0.8);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  &__wrap {
+    border: rem(3px) solid #01a259;
+    border-radius: rem(45px);
+    max-width: rem(400px);
+    width: 100%;
+    margin: 0 auto;
+    padding: rem(40px);
+
+    .title {
+      font-size: rem(40px);
+      margin-bottom: rem(40px);
+    }
+
+    .input-wrap {
+      padding: 0;
+      overflow: hidden;
+      input {
+        padding: 0 rem(40px);
+      }
+
+      margin-bottom: rem(30px);
+    }
+
+    .callback-btn {
+      margin-bottom: rem(30px);
+    }
+  }
+
+  &__agree {
+    margin-bottom: rem(25px);
+
+    label {
+      color: $wc;
+      cursor: pointer;
+      position: relative;
+
+      a {
+        text-transform: uppercase;
+        color: $wc;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

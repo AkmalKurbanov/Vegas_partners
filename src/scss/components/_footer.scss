@@ -1,79 +1,65 @@
 .footer {
   flex: 0 0 auto;
+  padding: rem(100px) 0 0;
 
   &__top {
     display: flex;
     justify-content: space-between;
-    padding: rem(100px) 0;
+    padding: 0 0 rem(100px) 0;
+  }
+
+  &__bottom {
+    background-size: cover;
+    background-position: center center;
+    padding: rem(30px) 0;
   }
 
   .mail {
-    &__form-wrap {
-      border: rem(3px) solid #01a259;
-      display: inline-flex;
-      text-transform: uppercase;
-      border-radius: rem(45px);
+    max-width: rem(400px);
+    width: 100%;
+
+    button {
+      cursor: pointer;
+    }
+  }
+
+  &__partners-slider {
+    padding-bottom: rem(30px);
+  }
+
+  &__partners {
+    max-width: rem(820px);
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($bc, 0.4);
+      z-index: 2;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__partners-text {
+    p {
+      text-align: center;
       color: $wc;
       font-weight: 700;
-      padding: rem(23px) rem(70px) rem(23px) rem(15px);
-      position: relative;
-      max-width: rem(400px);
-      width: 100%;
-
-      ::-webkit-input-placeholder {
-        color: $wc;
-        padding-left: rem(45px);
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      ::-moz-placeholder {
-        color: $wc;
-        padding-left: rem(45px);
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      :-moz-placeholder {
-        color: $wc;
-        padding-left: rem(45px);
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      :-ms-input-placeholder {
-        color: $wc;
-        padding-left: rem(45px);
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      &:hover {
-        background-color: #01a259;
-
-        span {
-          transform: translate(-12%, -50%);
-        }
-      }
+      font-size: rem(24px);
 
       span {
-        max-width: rem(65px);
-        width: 100%;
-        min-height: rem(65px);
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        transition: $tr;
-      }
-
-      input {
-        z-index: 1;
-        position: relative;
-        color: $wc;
-        width: 100%;
-        max-width: 100%;
+        text-transform: uppercase;
+        color: $mc;
       }
     }
   }

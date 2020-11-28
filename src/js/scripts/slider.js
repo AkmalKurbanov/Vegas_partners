@@ -8,11 +8,16 @@
     });
     var swiper = new Swiper('.advantages-js', {
       direction: 'vertical',
-      navigation: {
-        nextEl: '.button-next',
-        prevEl: '.button-prev',
-        clickable: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
       },
+    });
+
+    var swiper = new Swiper('.partners-js', {
+      slidesPerView: 4,
+      loop: true,
+      spaceBetween: 30,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
