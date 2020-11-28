@@ -1,0 +1,66 @@
+.hamburger {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  // display: none;
+  background-color: $mc;
+  border-radius: rem(3px);
+  padding: rem(9px);
+
+  @include xs {
+    display: block;
+  }
+
+  ul {
+    li {
+      width: 75%;
+      height: 2px;
+      background-color: $wc;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:nth-child(1) {
+        top: rem(10px);
+        transition: all .5s;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        transition: $tr;
+      }
+
+      &:nth-child(3) {
+        bottom: rem(7px);
+        transition: all .5s;
+      }
+    }
+  }
+}
+
+.hamburger-open {
+  ul {
+    li {
+
+      &:first-child {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        left: -200%;
+        opacity: 0;
+      }
+
+      &:last-child {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -12,8 +12,20 @@ body {
 }
 
 .logo {
-  max-width: 170px;
+  max-width: rem(170px);
   width: 100%;
+
+  @include lg {
+    max-width: rem(120px);
+  }
+}
+
+.logo_mobile {
+  display: none;
+
+  @include sm {
+    display: block;
+  }
 }
 
 a {

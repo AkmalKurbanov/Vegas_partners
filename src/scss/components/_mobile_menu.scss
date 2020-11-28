@@ -1,0 +1,103 @@
+.mobile_menu {
+  max-width: 70%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  &__wrap {
+    border: rem(1px) solid $mc;
+    border-left: none;
+    border-radius: 0 rem(45px) rem(45px) 0;
+    overflow: hidden;
+    background-color: $bc;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__top {
+    background-color: #0b4c36;
+    position: relative;
+    padding: rem(10px) rem(5px) rem(10px) rem(20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 10%;
+      height: rem(100px);
+      right: 0;
+      top: 100%;
+      background-color: #0b4c36;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    padding: rem(40px) 0;
+
+    .social {
+      margin-top: rem(30px);
+    }
+  }
+
+  &__close-btn {
+    width: rem(30px);
+    height: rem(30px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(3px);
+    background-color: #127151;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      width: rem(3px);
+      height: rem(25px);
+      border-radius: rem(2px);
+      background-color: $wc;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__logo {
+    max-width: rem(100px);
+    width: 100%;
+  }
+
+  .nav {
+    display: none;
+
+    @include sm {
+      display: block;
+    }
+
+    ul {
+      li {
+        display: block;
+        text-align: left;
+        border-bottom: rem(1px) solid #3a3737;
+        margin: 0;
+        padding: rem(10px) 0 rem(10px) rem(70px);
+
+        &:before {
+          left: rem(40px);
+        }
+      }
+    }
+  }
+}
