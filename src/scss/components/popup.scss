@@ -19,24 +19,89 @@
     width: 100%;
     margin: 0 auto;
     padding: rem(40px);
+    box-sizing: border-box;
+
+    @include lg {
+      padding: rem(30px);
+    }
+
+    @include md {
+      padding: rem(25px);
+    }
+
+    @include sm {
+      padding: rem(20px);
+      max-width: rem(350px);
+      border-radius: rem(35px);
+    }
+    
+    @include xs {
+      max-width: rem(300px);
+      border-radius: rem(25px);
+    }
 
     .title {
       font-size: rem(40px);
       margin-bottom: rem(40px);
+
+      @include lg {
+        font-size: rem(30px);
+        margin-bottom: rem(30px);
+      }
+
+      @include md {
+        font-size: rem(25px);
+        margin-bottom: rem(25px);
+      }
+
+      @include sm {
+        font-size: rem(20px);
+        margin-bottom: rem(20px);
+      }
     }
 
     .input-wrap {
       padding: 0;
       overflow: hidden;
-      input {
-        padding: 0 rem(40px);
+      margin-bottom: rem(30px);
+
+      @include lg {
+        margin-bottom: rem(20px);
       }
 
-      margin-bottom: rem(30px);
+      @include md {
+        margin-bottom: rem(15px);
+      }
+
+      input {
+        padding: 0 rem(40px);
+
+        @include lg {
+          padding: 0 rem(30px);
+          height: rem(55px);
+        }
+
+        @include md {
+          padding: 0 rem(25px);
+          height: rem(50px);
+        }
+      }
+
     }
 
     .callback-btn {
       margin-bottom: rem(30px);
+
+      a {
+        @include sm {
+          padding: rem(17px) rem(100px) rem(17px) rem(25px);
+          font-size: rem(13px);
+
+          span {
+            max-width: rem(54px);
+          }
+        }
+      }
     }
   }
 

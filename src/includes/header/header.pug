@@ -1,24 +1,25 @@
 header.header
   .container
     .header__wrap
-      .logo
-        a(href="#")
-          img(src="/assets/img/logo.svg", alt="")
-          img(src="/assets/img/logo_mobile.svg", alt="").logo_mobile
-      .hamburger
-        ul
-          li
-          li
-          li     
+      .logo-wrap
+        .hamburger
+          ul
+            li
+            li
+            li     
+        .logo
+          a(href="#")
+            img(src="/assets/img/logo.svg", alt="").logo_desktop
+            img(src="/assets/img/logo_mobile.svg", alt="").logo_mobile
       .header__nav
         nav.nav
           ul
             mixin nav_item(item,active)
               li(class=active)
                 a(href="#")=item
-            +nav_item('main','active')
+            +nav_item('Main','active')
             +nav_item('Our brand')
-            +nav_item('questions and answers')
+            +nav_item('Questions and answers')
             +nav_item('Contacts')
       .header__button-panel
         a(href="#").btn.registration-js registration

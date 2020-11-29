@@ -1,7 +1,8 @@
 section.main-screen(style="background-image: url('assets/img/first-screen-bg.jpg')")
   .container
     .main-screen__title
-      h1 Reliable terms <br> of cooperation
+      each item in mainHeader
+        h1=item.title
     .gambling-chip
       ul.gambling-chip__list
         li 

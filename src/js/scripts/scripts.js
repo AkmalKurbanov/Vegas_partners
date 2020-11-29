@@ -22,8 +22,29 @@ $(document).mouseup(function (e) {
 });
 
 $(".nav").clone().appendTo(".mobile_menu__nav");
-$(".social ul").clone().appendTo(".mobile_menu .social");
+$(".footer .social ul").clone().appendTo(".mobile_menu .social");
 
 $('.hamburger').on('click', function () {
-  $(this).toggleClass('hamburger-open')
+  $(this).toggleClass('hamburger-open');
+  $('.mobile_menu').toggleClass('open-menu');
 });
+$('.mobile_menu__close-btn').on('click', function () {
+  $('.mobile_menu').removeClass('open-menu');
+  $('.hamburger').removeClass('hamburger-open');
+});
+$(document).mouseup(function (e) {
+  var div = $(".mobile_menu");
+  if (!div.is(e.target) &&
+    div.has(e.target).length === 0) {
+    div.removeClass("open-menu");
+    $('.hamburger').removeClass('hamburger-open');
+  }
+});
+
+var items = ["Example description\nPlease click the link\n\n", "Another example description\nMore info"];
+console.clear();
+
+
+var changed = items.map(i => i.replace(/\n/g, '<br />'));
+var div = document.querySelector(body);
+div.innerHTML = changed;

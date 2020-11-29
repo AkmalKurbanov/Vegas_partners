@@ -1,16 +1,15 @@
 .hamburger {
   width: 15px;
   height: 15px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   cursor: pointer;
-  // display: none;
   background-color: $mc;
   border-radius: rem(3px);
   padding: rem(9px);
+  position: relative;
+  margin-right: rem(20px);
+  display: none;
 
-  @include xs {
+  @include sm {
     display: block;
   }
 
@@ -29,7 +28,7 @@
       }
 
       &:nth-child(2) {
-        top: 50%;
+        top: 51%;
         transform: translateY(-50%);
         transform: translateX(-50%);
         transition: $tr;

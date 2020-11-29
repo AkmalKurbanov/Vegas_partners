@@ -5,9 +5,17 @@
   position: relative;
   z-index: 0;
 
+  @include lg {
+    padding: 0 0 rem(50px);
+  }
+
   .title-wrap {
     padding-left: rem(70px);
     color: $wc;
+
+    @include xs {
+      padding-left: 0;
+    }
   }
 
   .steps {
@@ -15,15 +23,46 @@
     align-items: center;
     margin-top: rem(32px);
 
+    .btn {
+      @include xs {
+        min-height: rem(30px);
+        font-size: rem(13px);
+        max-width: rem(130px);
+      }
+    }
+
     &__wrap {
       border-radius: rem(45px);
       border: rem(10px) solid $wc;
-      max-width: rem(810px);
+      max-width: 71%;
       height: rem(420px);
       background-size: cover;
       background-position: right;
       box-sizing: border-box;
       position: relative;
+
+      @include lg {
+        height: rem(400px);
+        max-width: 90%;
+      }
+
+      @include md {
+        height: rem(350px);
+        max-width: 85%;
+      }
+
+      @include sm {
+        height: rem(270px);
+        max-width: 80%;
+      }
+
+      @include xs {
+        height: rem(150px);
+        border: rem(5px) solid $wc;
+        border-radius: rem(25px);
+        max-width: 89%;
+      }
+
 
       &:after {
         position: absolute;
@@ -31,11 +70,31 @@
         width: 120%;
         left: 10%;
         top: 11%;
-        height: 397px;
-        border-radius: 50px;
+        height: rem(397px);
+        border-radius: rem(50px);
         background-color: #002c26;
         bottom: 0;
         z-index: -1;
+
+        @include lg {
+          width: 100%;
+        }
+
+        @include md {
+          width: 110%;
+          height: rem(350px);
+        }
+
+        @include sm {
+          height: rem(270px);
+          top: 11%;
+        }
+
+        @include xs {
+          height: rem(145px);
+          border-radius: rem(25px);
+          width: 105%;
+        }
       }
 
       .title-wrap {
@@ -47,10 +106,44 @@
       padding: rem(50px) rem(60px);
       overflow: hidden;
 
+      @include lg {
+        padding: rem(30px);
+      }
+
+      @include xs {
+        padding: rem(10px);
+      }
+
+      .title {
+        @include xs {
+          font-size: rem(13px);
+        }
+      }
+
       p {
-        font-size: 28px;
+        font-size: rem(28px);
         margin: rem(30px) 0 rem(40px);
         color: $wc;
+
+        @include lg {
+          font-size: rem(26px);
+          margin: rem(25px) 0;
+        }
+
+        @include md {
+          font-size: rem(20px);
+          margin: rem(20px) 0;
+        }
+
+        @include sm {
+          font-size: rem(16px);
+          margin: rem(15px) 0;
+        }
+
+        @include xs {
+          font-size: rem(10px);
+          margin: rem(7px) 0;
+        }
       }
     }
 
@@ -60,24 +153,24 @@
       font-weight: 700;
       font-size: rem(18px);
       margin-bottom: rem(20px);
+
+      @include xs {
+        margin-bottom: rem(5px);
+        font-size: rem(12px);
+      }
     }
 
     .pagination {
-      margin-left: rem(75px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: rem(180px);
-      width: rem(95px);
+      margin-left: 5%;
       position: relative;
+      max-width: 7%;
 
       .step-btn {
         cursor: pointer;
         outline: none;
         transition: $tr;
-        position: absolute;
-        width: rem(90px);
-        height: rem(90px);
+        max-width: rem(90px);
+        width: 100%;
 
         &:last-child {
           bottom: 0;
@@ -87,6 +180,18 @@
           opacity: 0.8;
           transform: translate(-3px, -3px);
         }
+      }
+
+      @include lg {
+        margin-left: 0.7%;
+      }
+
+      @include md {
+        margin-left: 3%;
+      }
+
+      @include xs {
+        margin-left: 0.7%;
       }
     }
   }

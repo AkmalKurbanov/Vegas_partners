@@ -2,6 +2,23 @@
   padding-bottom: rem(120px);
   background-size: cover;
   position: relative;
+
+  @include lg {
+    padding-bottom: rem(100px);
+  }
+
+  @include md {
+    padding-bottom: rem(80px);
+  }
+
+  @include sm {
+    padding-bottom: rem(60px);
+  }
+
+  @include xs {
+    padding-bottom: rem(40px);
+  }
+
   &:before {
     position: absolute;
     content: '';
@@ -12,8 +29,21 @@
     background-size: cover;
     background-position: top;
   }
+
   &__content {
     padding-left: rem(100px);
+
+    @include lg {
+      padding-left: rem(50px);
+    }
+
+    @include md {
+      padding-left: rem(40px);
+    }
+
+    @include sm {
+      padding-left: 0;
+    }
   }
 
   &__list {
@@ -23,6 +53,24 @@
     margin: 0;
     width: 100%;
     margin-bottom: rem(150px);
+    white-space: nowrap;
+
+    @include lg {
+      margin-bottom: rem(100px);
+    }
+
+    @include md {
+      margin-bottom: rem(70px);
+    }
+
+    @include sm {
+      margin-bottom: rem(50px);
+    }
+
+    @include xs {
+      margin-bottom: rem(40px);
+      overflow-x: scroll;
+    }
 
     li {
       display: inline-block;
@@ -34,12 +82,31 @@
       color: $wc;
       font-weight: 700;
       outline: none;
-      padding: 0 20px;
+      padding: 0 rem(20px);
       text-decoration: none;
       transition: $tr;
       padding: rem(30px) 0;
       display: block;
       text-align: center;
+
+      @include lg {
+        padding: rem(18px) 0;
+      }
+
+      @include md {
+        padding: rem(16px) 0;
+      }
+
+      @include sm {
+        padding: rem(14px) 0;
+        font-size: rem(15px);
+      }
+
+      @include xs {
+        padding: rem(12px) rem(15px);
+        font-size: rem(14px);
+      }
+
 
       &:before {
         position: absolute;
@@ -81,8 +148,23 @@
 
     p {
       font-size: rem(24px);
+      line-height: rem(30px);
       margin-bottom: rem(20px);
-      line-height: 30px;
+
+      @include lg {
+        font-size: rem(22px);
+        line-height: rem(27px);
+      }
+
+      @include md {
+        font-size: rem(20px);
+        line-height: rem(25px);
+      }
+
+      @include xs {
+        font-size: rem(13px);
+        line-height: rem(14px);
+      }
     }
   }
 
@@ -111,9 +193,28 @@
     border: rem(10px) solid $wc;
     width: 100%;
     padding: rem(130px) rem(20px) rem(20px);
-    // overflow: hidden;
     box-sizing: border-box;
     position: relative;
+
+    @include lg {
+      max-width: rem(270px);
+      min-height: rem(560px);
+      padding: rem(100px) rem(15px) rem(15px);
+    }
+
+    @include sm {
+      max-width: rem(240px);
+      min-height: rem(520px);
+      padding: rem(110px) rem(15px) rem(15px);
+    }
+
+    @include xs {
+      max-width: rem(130px);
+      min-height: rem(300px);
+      border-radius: rem(25px);
+      border: rem(5px) solid $wc;
+      padding: rem(70px) rem(15px) rem(15px);
+    }
 
     &__mob-img {
       position: relative;
@@ -131,6 +232,18 @@
     font-size: rem(46px);
     letter-spacing: rem(5px);
     margin-bottom: rem(20px);
+
+    @include lg {
+      font-size: rem(37px);
+    }
+
+    @include md {
+      font-size: rem(30px);
+    }
+
+    @include xs {
+      font-size: rem(13px);
+    }
   }
 
   &__mob-nav {
@@ -143,6 +256,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include lg {
+      max-width: rem(45px);
+      min-height: rem(200px);
+    }
+
+    @include xs {
+      max-width: rem(20px);
+      min-height: rem(150px);
+    }
 
     ul {
       flex-direction: column;
@@ -157,6 +280,11 @@
         border-radius: 100%;
         pointer-events: none;
         box-shadow: 0 0 10px rgba(#00ca91, 0.5);
+
+        @include xs {
+          width: rem(3px);
+          height: rem(3px);
+        }
 
         &:before,
         &:after {
@@ -177,6 +305,10 @@
     position: absolute;
     top: 0;
     margin-left: 140%;
+
+    @include lg {
+      margin-left: 133%;
+    }
 
     .btn {
       color: $wc !important;

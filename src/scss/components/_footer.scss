@@ -2,10 +2,40 @@
   flex: 0 0 auto;
   padding: rem(100px) 0 0;
 
+  @include lg {
+    padding: rem(70px) 0 0;
+  }
+
+  @include md {
+    padding: rem(50px) 0 0;
+  }
+
+  @include sm {
+    padding: rem(40px) 0 0;
+  }
+
+  @include xs {
+    padding: rem(30px) 0 0;
+  }
+
   &__top {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0 0 rem(100px) 0;
+
+    @include lg {
+      padding: 0 0 rem(70px) 0;
+    }
+
+    @include md {
+      padding: 0 0 rem(50px) 0;
+    }
+
+    @include sm {
+      padding: 0 0 rem(30px) 0;
+    }
+
   }
 
   &__bottom {
@@ -25,6 +55,11 @@
 
   &__partners-slider {
     padding-bottom: rem(30px);
+
+    @include xs {
+      padding: 0 rem(15px) rem(30px);
+
+    }
   }
 
   &__partners {
@@ -57,10 +92,79 @@
       font-weight: 700;
       font-size: rem(24px);
 
+      @include xs {
+        font-size: rem(16px);
+      }
+
       span {
         text-transform: uppercase;
         color: $mc;
       }
     }
+  }
+
+  .logo {
+    @include xs {
+      max-width: rem(30px);
+    }
+  }
+
+  .social {
+    ul {
+      li {
+        a {
+
+          @include md {
+            max-width: rem(35px);
+          }
+
+          @include sm {
+            max-width: rem(25px);
+          }
+
+          @include xs {
+            max-width: rem(20px);
+          }
+        }
+
+        @include sm {
+          margin-right: rem(10px);
+        }
+
+        @include xs {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .mail {
+    @include md {
+      max-width: rem(300px);
+    }
+
+    @include xs {
+      max-width: rem(155px);
+    }
+
+    .input-wrap {
+      @include md {
+        padding: 0 rem(35px) 0 rem(10px);
+      }
+
+      input {
+        @include md {
+          height: rem(30px);
+          font-size: rem(13px);
+        }
+      }
+
+      button {
+        @include md {
+          max-width: rem(31px);
+        }
+      }
+    }
+
   }
 }

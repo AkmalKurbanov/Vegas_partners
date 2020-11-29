@@ -1,6 +1,19 @@
 .header {
   background-color: $bc;
   padding: 15px 0;
+  position: relative;
+  z-index: 2;
+
+  .container {
+    @include sm {
+      max-width: 100%;
+    }
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+  }
 
   &__wrap {
     display: flex;
@@ -21,6 +34,14 @@
 
       .registration-js {
         margin-bottom: rem(15px);
+
+        @include sm {
+          margin: 0;
+        }
+
+        @include xs {
+          margin-bottom: rem(10px);
+        }
       }
     }
 
@@ -30,7 +51,28 @@
       .btn {
         max-width: rem(130px);
         font-size: rem(14px);
+
+        @include sm {
+          flex-direction: row;
+          max-width: rem(160px);
+        }
+
+        @include xs {
+          max-width: rem(140px);
+          font-size: rem(13px);
+          min-height: rem(35px);
+        }
       }
+    }
+
+    @include sm {
+      flex-direction: row;
+      max-width: rem(340px);
+    }
+
+    @include xs {
+      flex-direction: column;
+      max-width: rem(160px);
     }
   }
 }
@@ -108,4 +150,3 @@
     }
   }
 }
-

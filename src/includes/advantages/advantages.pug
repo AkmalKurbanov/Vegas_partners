@@ -1,26 +1,19 @@
 .advantages(style="background-image: url('assets/img/advantage_bg.jpg')")
+  .advantages__bg-mobile
+    img(src="../../assets/img/advantage_mobile_bg.jpg", alt="")
   .container
     .title-wrap
       h2.title Why is it profitable <br> with us?  
     .advantages__slider
       .swiper-container.advantages-js
         .swiper-wrapper
-          .swiper-slide  
-            .advantages__item
-              .advantages__count
-                span 01
-              .advantages__text
-                p We guarantee timely <br>
-                  |payments and provide detailed reports <br>
-                  |on partners' earnings
-          .swiper-slide  
-            .advantages__item
-              .advantages__count
-                span 02
-              .advantages__text
-                p We guarantee timely <br>
-                  |payments and provide detailed reports <br>
-                  |on partners' earnings
+          each item in adv
+            .swiper-slide  
+              .advantages__item
+                .advantages__count
+                  span=item.count
+                .advantages__text
+                  p=item.text 
     .callback-btn.callback-js
       a(href="#") Contact us
         span

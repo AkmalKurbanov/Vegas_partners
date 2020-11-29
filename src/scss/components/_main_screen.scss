@@ -8,25 +8,54 @@
     color: $wc;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: rem(70px);
     padding-top: rem(50px);
     position: relative;
     z-index: 1;
     padding-bottom: rem(50px);
-    
+
+    @include sm {
+      padding: 0;
+    }
+
     h1 {
       font-size: rem(70px);
+      line-height: rem(70px);
       margin: 0;
       position: sticky;
       top: 65%;
       text-shadow: 1px 10px 10px black, 0 0 1em $wc;
+
+      @include lg {
+        font-size: rem(65px);
+        line-height: rem(65px);
+      }
+
+      @include md {
+        font-size: rem(50px);
+        line-height: rem(50px);
+      }
+
+      @include sm {
+        font-size: rem(45px);
+        line-height: rem(45px);
+        top: 75%;
+        padding-bottom: rem(20px);
+      }
+
+      @include xs {
+        font-size: rem(38px);
+        line-height: rem(38px);
+      }
+
     }
   }
 
   .gambling-chip {
     position: absolute;
     top: 0;
-    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
     min-height: 100vh;
 
     &__list {
@@ -44,7 +73,19 @@
           top: rem(100px);
           left: rem(50px);
           width: rem(100px);
-          height: rem(100px);
+
+          @include lg {
+            width: rem(80px);
+          }
+
+          @include md {
+            width: rem(60px);
+          }
+
+          @include xs {
+            left: rem(10px);
+            width: rem(40px);
+          }
         }
 
         &:nth-child(2) {
@@ -52,7 +93,18 @@
           top: rem(350px);
           left: 30%;
           width: rem(90px);
-          height: rem(90px);
+
+          @include lg {
+            width: rem(70px);
+          }
+
+          @include md {
+            width: rem(50px);
+          }
+
+          @include xs {
+            width: rem(40px);
+          }
         }
 
         &:nth-child(3) {
@@ -60,7 +112,19 @@
           top: rem(300px);
           right: 20%;
           width: rem(140px);
-          height: rem(140px);
+
+          @include lg {
+            width: rem(120px);
+          }
+
+          @include md {
+            width: rem(100px);
+          }
+
+          @include xs {
+            right: rem(10px);
+            width: rem(60px);
+          }
         }
 
         &:nth-child(4) {
@@ -68,7 +132,19 @@
           top: rem(50px);
           right: 20%;
           width: rem(140px);
-          height: rem(140px);
+
+          @include lg {
+            width: rem(120px);
+          }
+
+          @include md {
+            width: rem(100px);
+          }
+
+          @include xs {
+            right: rem(10px);
+            width: rem(60px);
+          }
         }
 
         &:nth-child(5) {
@@ -76,7 +152,20 @@
           top: rem(350px);
           left: 0;
           width: rem(180px);
-          height: rem(180px);
+
+          @include lg {
+            width: rem(160px);
+          }
+
+          @include md {
+            width: rem(140px);
+          }
+
+          @include xs {
+            width: rem(70px);
+            top: rem(300px);
+          }
+
         }
 
         &:nth-child(6) {
@@ -84,7 +173,20 @@
           top: rem(350px);
           right: 37%;
           width: rem(50px);
-          height: rem(50px);
+
+          @include lg {
+            width: rem(30px);
+          }
+
+          @include md {
+            width: rem(25px);
+          }
+
+          @include xs {
+            width: rem(30px);
+            right: 40px;
+            top: 200px;
+          }
         }
 
         &:nth-child(7) {
@@ -92,7 +194,18 @@
           top: rem(170px);
           left: 27%;
           width: rem(150px);
-          height: rem(150px);
+
+          @include lg {
+            width: rem(130px);
+          }
+
+          @include md {
+            width: rem(120px);
+          }
+
+          @include xs {
+            width: rem(60px);
+          }
         }
 
         &:nth-child(8) {
@@ -100,7 +213,18 @@
           top: rem(470px);
           right: 17%;
           width: rem(50px);
-          height: rem(50px);
+
+          @include lg {
+            width: rem(30px);
+          }
+
+          @include md {
+            top: rem(450px);
+          }
+
+          @include sm {
+            top: rem(400px);
+          }
         }
 
       }

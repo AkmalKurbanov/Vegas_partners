@@ -67,7 +67,7 @@ gulp.task('webpStyle', function () {
 gulp.task('html', function () {
    return gulp.src(['src/**/*.pug'])
       .pipe(plumber())
-      .pipe(pug({
+      .pipe(pug({ 
          doctype: 'html',
          pretty: true,
          locals: dataFromFile || {}
