@@ -128,12 +128,12 @@ gulp.task('js', function () {
 });
 
 gulp.task('images', function () {
-   return gulp.src('./src/assets/img/**/*')
+   return gulp.src('./src/https://useimg.xyz/vegas/**/*')
       .pipe(webp({
          quality: 70
       }))
       .pipe(gulp.dest('./dist/assets/img')),
-      gulp.src('./src/assets/img/**/*')
+      gulp.src('./src/https://useimg.xyz/vegas/**/*')
       .pipe(imagemin({
          progressive: true,
          interlaced: true,
@@ -185,7 +185,7 @@ gulp.task('purify', function () {
 gulp.task('watch', function () {
    gulp.watch('src/scss/**/*.scss', gulp.parallel('scss'));
    gulp.watch('src/assets/**/*.*', gulp.parallel('assets'));
-   gulp.watch('src/assets/img/**/*', gulp.parallel('images'));
+   gulp.watch('src/https://useimg.xyz/vegas/**/*', gulp.parallel('images'));
    gulp.watch('src/js/**/*.js', gulp.parallel('js'));
    gulp.watch('src/assets/**/*.json');
    gulp.watch('src/**/*.pug', gulp.parallel('html'))

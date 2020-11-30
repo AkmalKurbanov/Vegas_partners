@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  overflow: hidden;
 
   &__title {
     color: $wc;
@@ -228,6 +229,17 @@
           }
         }
 
+        &:nth-child(9) {
+          left: 90%;
+          bottom: 10%;
+          width: rem(500px);
+        }
+
+        &:nth-child(10) {
+          right: 100%;
+          top: 0;
+          width: rem(200px);
+        }
       }
     }
   }

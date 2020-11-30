@@ -2,7 +2,7 @@
   padding-bottom: rem(120px);
   background-size: cover;
   position: relative;
-
+  overflow: hidden;
   @include lg {
     padding-bottom: rem(100px);
   }
@@ -24,10 +24,26 @@
     content: '';
     width: 100%;
     height: 200%;
-    background-image: url('../../assets/img/tabs_bg1.png');
+    background-image: url('https://useimg.xyz/vegas/tabs_bg1.png');
     top: -80%;
     background-size: cover;
     background-position: top;
+  }
+
+  &__bg-elent {
+    position: absolute;
+
+    &:first-child {
+      width: rem(500px);
+      right: 90%;
+    }
+
+    &:nth-child(2) {
+      width: rem(200px);
+      left: 90%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__content {
@@ -189,6 +205,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    overflow: hidden;
   }
 
   &__mob {
@@ -332,6 +349,7 @@
     height: rem(2px);
     background-color: #8e7576;
     top: rem(40px);
+    left: rem(15px);
 
     &:before {
       position: absolute;
@@ -360,4 +378,8 @@
       display: block;
     }
   }
+}
+
+.tabs__list::-webkit-scrollbar {
+  width: 0;
 }

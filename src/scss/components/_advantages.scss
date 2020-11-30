@@ -4,7 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-
+  overflow: hidden;
   @include lg {
     padding: rem(150px) 0;
   }
@@ -20,6 +20,23 @@
 
   @include xs {
     padding: rem(50px) 0;
+  }
+
+  &__bg-elent {
+    position: absolute;
+
+    &:first-child {
+      width: rem(500px);
+      left: 80%;
+      top: -6%;
+    }
+
+    &:nth-child(2) {
+      width: rem(200px);
+      right: 85%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__bg-mobile {
