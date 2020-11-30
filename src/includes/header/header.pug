@@ -9,18 +9,14 @@ header.header
             li     
         .logo
           a(href="#")
-            img(src="/assets/img/logo.svg", alt="").logo_desktop
-            img(src="/assets/img/logo_mobile.svg", alt="").logo_mobile
+            img(src="assets/img/logo.svg", alt="").logo_desktop
+            img(src="assets/img/logo_mobile.svg", alt="").logo_mobile
       .header__nav
         nav.nav
           ul
-            mixin nav_item(item,active)
-              li(class=active)
-                a(href="#")=item
-            +nav_item('Main','active')
-            +nav_item('Our brand')
-            +nav_item('Questions and answers')
-            +nav_item('Contacts')
+            each item in menu
+              li(class=item.active)
+                a(href="#")=item.link
       .header__button-panel
         a(href="#").btn.registration-js registration
         a(href="#").btn.btn--another-kind.login-js Enter

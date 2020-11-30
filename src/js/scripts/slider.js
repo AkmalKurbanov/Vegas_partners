@@ -9,7 +9,7 @@
     var swiper = new Swiper('.advantages-js', {
       direction: 'vertical',
       autoplay: {
-        delay: 5000,
+        delay: 4000,
         disableOnInteraction: false,
       },
     });

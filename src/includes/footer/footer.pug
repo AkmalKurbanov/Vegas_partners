@@ -3,8 +3,8 @@ footer.footer
     .footer__top
       .logo
         a(href="#")
-          img(src="/assets/img/logo.svg", alt="").logo_desktop
-          img(src="/assets/img/logo_mobile.svg", alt="").logo_mobile
+          img(src="assets/img/logo.svg", alt="").logo_desktop
+          img(src="assets/img/logo_mobile.svg", alt="").logo_mobile
       .social
         ul
           each val, index in ['assets/img/twit.svg', 'assets/img/mail.svg', 'assets/img/insta.svg']
@@ -17,19 +17,14 @@ footer.footer
             input(type="text" placeholder="enter your email")
             button(type="submit")
               img(src="assets/img/mail.svg", alt="")
-  .footer__bottom(style="background-image: url('../../assets/img/footer_bg.jpg')")
+  .footer__bottom(style="background-image: url('assets/img/footer_bg.jpg')")
     .footer__partners
       .footer__partners-slider
         .swiper-container.partners-js
           .swiper-wrapper
-            .swiper-slide 
-              img(src="../../assets/img/partner1.svg", alt="") 
-            .swiper-slide 
-              img(src="../../assets/img/partner2.svg", alt="") 
-            .swiper-slide 
-              img(src="../../assets/img/partner3.svg", alt="") 
-            .swiper-slide 
-              img(src="../../assets/img/partner4.svg", alt="") 
+            each item in partnersLogo
+              .swiper-slide 
+                img(src=item.partnersImg  alt="") 
       .footer__partners-text
         p
           span Vegas partners 

@@ -40,11 +40,3 @@ $(document).mouseup(function (e) {
     $('.hamburger').removeClass('hamburger-open');
   }
 });
-
-var items = ["Example description\nPlease click the link\n\n", "Another example description\nMore info"];
-console.clear();
-
-
-var changed = items.map(i => i.replace(/\n/g, '<br />'));
-var div = document.querySelector(body);
-div.innerHTML = changed;

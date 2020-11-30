@@ -12,6 +12,7 @@
     position: relative;
     z-index: 1;
     padding-bottom: rem(50px);
+    max-width: rem(550px);
 
     @include sm {
       padding: 0;

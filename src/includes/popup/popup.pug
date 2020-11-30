@@ -3,22 +3,17 @@
     .title-wrap
       h2.title registartion
     form
-      .input-wrap
-        input(type="text" name="email" placeholder="enter email"  autocomplete="off")
-      .input-wrap
-        input(type="password" placeholder="enter password"  autocomplete="off")
-      .input-wrap
-        input(type="password" placeholder="confirm the password"  autocomplete="off")
+      each item in registartionInputField
+        .input-wrap
+          input(type=item.typeField name=item.name placeholder=item.placeholder autocomplete="off")
       .popup__agree
         input(type="checkbox" id="agree")
         label(for="agree") Lorem ipsum 
-           a(href="#") dolor sit.
-
+          a(href="#") dolor sit.
       .callback-btn
         a(href="#") Contact us
           span
             img(src="assets/img/callback.png", alt="")
-
       button(type="submit").btn registration
 
 .popup.callback
@@ -26,22 +21,17 @@
     .title-wrap
       h2.title CAllback
     form
-      .input-wrap
-        input(type="text" name="name" placeholder="enter your name")
-      .input-wrap
-        input(type="text" placeholder="enter your email")
-      .input-wrap
-        input(type="number" name="number" placeholder="enter your number")
+      each item in callbackInputField
+        .input-wrap
+          input(type=item.typeField name=item.name placeholder=item.placeholder autocomplete="off")
       .popup__agree
         input(type="checkbox" id="agree")
         label(for="agree") Lorem ipsum 
           a(href="#") dolor sit.
-
       .callback-btn
         a(href="#") Contact us
           span
             img(src="assets/img/callback.png", alt="")
-
       button(type="submit").btn send
 
 .popup.login
@@ -49,18 +39,15 @@
     .title-wrap
       h2.title log in
     form
-      .input-wrap
-        input(type="text" placeholder="enter your email")
-      .input-wrap
-        input(type="number" name="password" placeholder="enter your password")
+      each item in loginInputField
+        .input-wrap
+          input(type=item.typeField name=item.name placeholder=item.placeholder autocomplete="off")
       .popup__agree
         input(type="checkbox" id="agree")
         label(for="agree") Lorem ipsum 
           a(href="#") dolor sit.
-
       .callback-btn
         a(href="#") Contact us
           span
             img(src="assets/img/callback.png", alt="")
-
       button(type="submit").btn log in

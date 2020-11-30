@@ -2,56 +2,30 @@
   .container
     .tabs__wrap
       ul.tabs__list
-        mixin tabs_item(item,active,current)
-          li(class=active class=current)
-            a(href='#')=item 
-        +tabs_item('24/7', 'first','current')    
-        +tabs_item('Audience', 'second')
-        +tabs_item('Payments', 'third')
-        +tabs_item('Revenue', 'fourth')
-        +tabs_item('For the best', 'fifth')
-        +tabs_item('Bonuses', 'sixth')
-        +tabs_item('How to earn','seventh')
-     
+        each item in tabsItem
+          li(class=item.active class=item.current)
+            a(href='#')=item.menuItem 
       .tabs__content
         .tabs__mob-wrap
           .tabs__mob-nav    
             ul
-              mixin tabs_item(item,active,current)
-                li(class=active class=current)=item
-              +tabs_item('', 'first','current')    
-              +tabs_item('', 'second')
-              +tabs_item('', 'third')
-              +tabs_item('', 'fourth')
-              +tabs_item('', 'fifth')
-              +tabs_item('', 'sixth')
-              +tabs_item('','seventh')
+              each item in tabsMobItem
+                li(class=item.active class=item.current)
           .tabs__mob
             .tabs__mob-arrow
             .tabs__mob-hamburger
               i
               i
               i
-            .tabs__item.current
-              h2.tabs__title Contact <br> US
-              .tabs__item-img
-                img(src="assets/img/tabs_img.svg", alt="")
-              .tabs__item-content 
-                h2.tabs__title 24/7 Professional support
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                a(href="#").btn.registration-js registration
-            .tabs__item 
-              a(href="#") 2
-            .tabs__item 
-              a(href="#") 3
-            .tabs__item 
-              a(href="#") 4
-            .tabs__item 
-              a(href="#") 5
-            .tabs__item 
-              a(href="#") 6
-            .tabs__item 
-              a(href="#") 7
-       
-     
-   
+            each item in tabsItemContent
+              .tabs__item(class=item.current)
+                h2.tabs__title=item.title 
+                .tabs__item-img
+                  img(src=item.img, alt="")
+                .tabs__item-content 
+                  h2.tabs__title=item.titleSecond 
+                  p=item.text 
+                  a(href="#").btn.registration-js registration
+              
+      
+    
